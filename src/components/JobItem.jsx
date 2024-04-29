@@ -5,7 +5,7 @@ export default function JobItem({reference, location, type, date, complete}){
 
   const dispatch = useDispatch();
   const completeStyles = "p-2 bg-teal-700 my-6 rounded-lg"
-  const incompleteStyles = "p-2 bg-pink-800 my-6 rounded"
+  const incompleteStyles = "p-2 bg-pink-800 my-6 rounded-lg"
   function markJobComplete(){
     dispatch(jobsActions.markJobComplete(reference))
     
@@ -24,6 +24,7 @@ export default function JobItem({reference, location, type, date, complete}){
         <div className="text-slate-200">
           <p>Location: {location}</p>
           <p>Type: {type}</p>
+          <p>Job</p>
         </div>
         <div className="text-slate-200">
           {date}
